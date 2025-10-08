@@ -51,7 +51,7 @@ def disconnect():
         client_socket.close()
     text_log.insert(tk.END, " Disconnesso.\n")
 
-# --- GUI ---
+#PARTE GRAFICA
 root = tk.Tk()
 root.title("ToodoMessage Client")
 root.geometry("600x500")
@@ -77,3 +77,4 @@ entry_message.grid(row=0, column=0, padx=5)
 ttk.Button(frame_send, text="Invia", command=send_message).grid(row=0, column=1, padx=5)
 
 root.mainloop()
+
