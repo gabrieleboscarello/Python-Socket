@@ -18,7 +18,7 @@ def start_server():
     try:
         server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # crea socket TCP (IPv4, TCP)
         server_socket.bind((HOST, PORT))  # collega il socket all’indirizzo e alla porta
-        server_socket.listen(1)  # il server accetta una connessione alla volta
+        server_socket.listen(1)  # il server accetta una connessione alla volta (Valore Modificabile in base a quante connessioni vogliamo, grazie alla libreria threading)
         text_log.insert(tk.END, f" Server in ascolto su {HOST}:{PORT}\n")
 
        
@@ -109,3 +109,4 @@ ttk.Button(frame_send, text="Invia", command=send_message).grid(row=0, column=1,
 
 # avvia la GUI
 root.mainloop()
+
